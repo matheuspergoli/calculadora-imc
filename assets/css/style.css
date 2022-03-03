@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+}
+
+main {
+  margin: auto;
+  max-width: 60rem;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  background-color: white;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: clamp(5rem, 10vw, 15rem);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+form {
+  margin-top: 3rem;
+}
+
+fieldset {
+  padding: 2rem;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0px;
+  transition-duration: 150ms;
+}
+
+input:focus {
+  outline: none;
+  transform: scale(1.02);
+  border: 2px solid var(--primary-color);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0px;
+  border: 2px solid black;
+  transition-duration: 150ms;
+  background-color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--primary-color-darker);
+}
+
+#div-resultado p {
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+  background-color: cyan;
+  border: 2px solid black;
+}
+
+#div-resultado p.bad {
+  background-color: red;
+}

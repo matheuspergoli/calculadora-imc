@@ -4,46 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+    <title>Calculadora IMC</title>
 </head>
 <body>
-    <div id="container-geral">
-        <form action="#">
-            <div id="container">
+    <main>
+        <h1>Tabela IMC</h1>
+        <section>
+            <article>
+                <h2>IMC</h2>
+                <p>Menos do que 18,5</p>
+                <p>Entre 18,5 e 24,9</p>
+                <p>Entre 25 e 29,9</p>
+                <p>Entre 30 e 34,9</p>
+                <p>Entre 35 e 39,9</p>
+                <p>Mais do que 40</p>
+            </article>
+
+            <article>
+                <h2>Resultado</h2>
+                <p>Abaixo do peso</p>
+                <p>Peso normal</p>
+                <p>Sobrepeso</p>
+                <p>Obesidade grau 1</p>
+                <p>Obesidade grau 2</p>
+                <p>Obesidade grau 3</p>
+            </article>
+        </section>
+
+        <form>
+            <fieldset>
+                <legend>Calcule seu IMC</legend>
                 <p>
-                    <label for="idade">Idade</label> <br>
-                    <input type="number" name="idade" id="idade" placeholder="Digite aqui sua idade"> anos
+                    <label for="peso">Peso:</label>
+                    <input type="text" name="peso" id="peso" maxlength="3">
                 </p>
+                <br>
                 <p>
-                    <label for="altura">Altura</label> <br>
-                    <input type="number" name="altura" id="altura" placeholder="EX:. 1.75" required> cm
+                    <label for="altura">Altura:</label>
+                    <input type="text" name="altura" id="altura" maxlength="4">
                 </p>
-                <p>
-                    <label for="peso">Peso</label> <br>
-                    <input type="number" name="peso" id="peso" placeholder="EX:. 75" required> kg
-                </p>
-                <input type="button" value="Calcular" id="botao">
-            </div>
-            <p><strong>(Insira valores reais para um resultado mais preciso)</strong></p>
-            <div id="container-resultado">
-                <h1 id="title-imc"></h1>
-                <p id="text-imc"></p>
-                <h1>O que é IMC?</h1>
-                <p>IMC significa Índice de Massa Corporal e é um parâmetro utilizado para saber se o peso está de acordo com a altura, o que pode interferir diretamente na saúde e qualidade de vida da pessoa. Assim, a partir do resultado do IMC é possível saber também se a pessoa está dentro do peso ideal e também identificar sobrepeso, obesidade ou desnutrição em crianças, adolescentes, adultos ou idosos. </p>
-                <h1>Como é calculado?</h1>
-                <p>O IMC é a relação entre peso e altura e o cálculo é feito de acordo com a fórmula:</p>
-                <p><strong>IMC = peso / (altura x altura)</strong></p>
-                <p>O peso deve estar em kg e a altura em metros, e o resultado é dado em kg/m<sup>2</sup>. Depois de obter o resultado, é possível verificar em que faixa o IMC se encontra, podendo indicar:</p>
-                <ul>
-                    <li id="item1"><strong>Magreza</strong>, quando o resultado é menor que 18,5 kg/m<sup>2</sup></li>
-                    <li id="item2"><strong>Normal</strong>, quando o resultado está entre 18,5 e 24,9 kg/m<sup>2</sup></li>
-                    <li id="item3"><strong>Sobrepeso</strong>, quando o resultado está entre 24,9 e 30 kg/m<sup>2</sup></li>
-                    <li id="item4"><strong>Obesidade</strong>, quando o resultado é maior que 30 kg/m<sup>2</sup></li>
-                </ul>
-            </div>
+                <br>
+                <button>Calcular</button>
+                <div id="div-resultado"></div>
+            </fieldset>
         </form>
-    </div>
+    </main>
 </body>
 </html>
